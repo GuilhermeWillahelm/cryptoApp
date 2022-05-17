@@ -33,3 +33,6 @@ $cryptoApp-theme: mat.define-dark-theme((
 // that you are using.
 @include mat.all-component-themes($cryptoApp-theme);
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #212121;}
+
