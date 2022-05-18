@@ -9,13 +9,19 @@
                 <h2 [innerHtml]="coinData?.description?.en.split('. ')[0]"></h2>
                 <div class="more-detail">
                     <span class="title">Rank: </span><span class="value">{{coinData?.market_cap_rank}}</span><br>
-                    <span class="title">Current Price: </span><span class="value">{{coinData?.market_data.current_price.usd | currency}}</span><br>
-                    <span class="title">Current Cap: </span><span class="value">{{coinData?.market_data.market_cap.usd | currency}}</span>
+                    <span class="title">Current Price: </span><span class="value">{{coinData?.market_data.current_price.usd | currency: currency}}</span><br>
+                    <span class="title">Current Cap: </span><span class="value">{{coinData?.market_data.market_cap.usd | currency: currency}}</span>
                 </div>
             </div>
         </div>
         <div class="col-md-8">
             <canvas style="width: 300px;" baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="lineChartType"></canvas>
+            <div class="d-flex justify-content-around">
+                <button (click)="getGraphData(1)" class="btn btn-custom">1 day</button>
+                <button (click)="getGraphData(30)" class="btn btn-custom">30 days</button>
+                <button (click)="getGraphData(90)" class="btn btn-custom">90 days</button>
+                <button (click)="getGraphData(365)" class="btn btn-custom">1 year</button>
+            </div>
         </div>
     </div>
 </div>
