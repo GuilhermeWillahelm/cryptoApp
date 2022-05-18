@@ -3,7 +3,7 @@ const express = require('express');
 // start express
 const app = express();
 // folder build
-const appName = 'crypto-verifyapp';
+const appName = 'crypto-app';
 // builg generate files
 const outputPath = `${__dirname}/dist/${appName}`;
 
